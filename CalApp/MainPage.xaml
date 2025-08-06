@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalApp.MainPage"
+             BackgroundColor="#F9FAFB"
+             Title="Calorie Calculator">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30"
+            Spacing="20"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
+
+            <Label
+                Text="Calorie Calculator"
+                FontSize="28"
+                FontAttributes="Bold"
+                TextColor="#1F2937"
+                HorizontalOptions="Center" />
+
+            <Frame
+                Padding="20"
+                BackgroundColor="White"
+                CornerRadius="16"
+                HasShadow="True"
+                WidthRequest="340"
+                BorderColor="#E5E7EB">
+
+                <VerticalStackLayout Spacing="12">
+
+                    <!-- INPUT FIELDS -->
+                    <Entry x:Name="AgeEntry" Placeholder="Age" Keyboard="Numeric" TextColor="Black"/>
+                    <Entry x:Name="HeightEntry" Placeholder="Height (cm)" Keyboard="Numeric" TextColor="Black"/>
+                    <Entry x:Name="WeightEntry" Placeholder="Weight (kg)" Keyboard="Numeric" TextColor="Black"/>
+
+                    <Picker x:Name="GenderPicker" Title="Gender" TextColor="Black">
+                        <Picker.Items>
+                            <x:String>Male</x:String>
+                            <x:String>Female</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <Picker x:Name="ActivityPicker" Title="Activity" TextColor="Black">
+                        <Picker.Items>
+                            <x:String>Walking</x:String>
+                            <x:String>Running</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <Entry x:Name="SpeedEntry" Placeholder="Speed (km/h)" Keyboard="Numeric"  TextColor="Black"/>
+
+                    <Picker x:Name="MeasurePicker" Title="Measure Type" TextColor="Black">
+                        <Picker.Items>
+                            <x:String>Steps</x:String>
+                            <x:String>Distance</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <Entry x:Name="StepsEntry" Placeholder="Steps (if applicable)" Keyboard="Numeric" TextColor="Black"/>
+                    <Entry x:Name="DistanceEntry" Placeholder="Distance (km if applicable)" Keyboard="Numeric" TextColor="Black"/>
+
+                    <!-- BUTTON -->
+                    <Button
+                        Text="Calculate"
+                        Clicked="OnCalculateClicked"
+                        BackgroundColor="#6366F1"
+                        TextColor="White"
+                        CornerRadius="10"
+                        FontAttributes="Bold"
+                        HeightRequest="50"
+                        />
+
+                    <!-- RESULT -->
+                    <Label
+                        x:Name="ResultLabel"
+                        FontSize="18"
+                        TextColor="#10B981"
+                        FontAttributes="Bold"
+                        HorizontalTextAlignment="Center"
+                        />
+
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+
+
+</ContentPage>
