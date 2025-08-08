@@ -12,78 +12,112 @@
             VerticalOptions="Center"
             HorizontalOptions="Center">
 
+            <!-- Title -->
             <Label
                 Text="Calorie Calculator"
-                FontSize="28"
+                FontSize="32"
                 FontAttributes="Bold"
+                FontFamily="RobotoBold"
                 TextColor="#1F2937"
                 HorizontalOptions="Center" />
 
+            <!-- Main Card -->
             <Frame
-                Padding="20"
-                BackgroundColor="White"
-                CornerRadius="16"
+                Padding="24"
+                BackgroundColor="#FFFFFF"
                 HasShadow="True"
-                WidthRequest="340"
+                WidthRequest="360"
                 BorderColor="#E5E7EB">
 
-                <VerticalStackLayout Spacing="12">
+                <VerticalStackLayout Spacing="16">
 
-                    <!-- INPUT FIELDS -->
-                    <Entry x:Name="AgeEntry" Placeholder="Age" Keyboard="Numeric" TextColor="Black"/>
-                    <Entry x:Name="HeightEntry" Placeholder="Height (cm)" Keyboard="Numeric" TextColor="Black"/>
-                    <Entry x:Name="WeightEntry" Placeholder="Weight (kg)" Keyboard="Numeric" TextColor="Black"/>
+                    <!-- Age -->
+                    <Frame Padding="10" BackgroundColor="#F3F4F6" BorderColor="#D1D5DB" HasShadow="False">
+                        <Entry x:Name="AgeEntry" Placeholder="Age" Keyboard="Numeric"
+                               TextColor="Black" BackgroundColor="Transparent" PlaceholderColor="#6B7280" />
+                    </Frame>
 
-                    <Picker x:Name="GenderPicker" Title="Gender" TextColor="Black">
-                        <Picker.Items>
-                            <x:String>Male</x:String>
-                            <x:String>Female</x:String>
-                        </Picker.Items>
-                    </Picker>
+                    <!-- Height -->
+                    <Frame Padding="10" BackgroundColor="#F3F4F6" BorderColor="#D1D5DB" HasShadow="False">
+                        <Entry x:Name="HeightEntry" Placeholder="Height (cm)" Keyboard="Numeric"
+                               TextColor="Black" BackgroundColor="Transparent" PlaceholderColor="#6B7280" />
+                    </Frame>
 
-                    <Picker x:Name="ActivityPicker" Title="Activity" TextColor="Black">
-                        <Picker.Items>
-                            <x:String>Walking</x:String>
-                            <x:String>Running</x:String>
-                        </Picker.Items>
-                    </Picker>
+                    <!-- Weight -->
+                    <Frame Padding="10" BackgroundColor="#F3F4F6" BorderColor="#D1D5DB" HasShadow="False">
+                        <Entry x:Name="WeightEntry" Placeholder="Weight (kg)" Keyboard="Numeric"
+                               TextColor="Black" BackgroundColor="Transparent" PlaceholderColor="#6B7280" />
+                    </Frame>
 
-                    <Entry x:Name="SpeedEntry" Placeholder="Speed (km/h)" Keyboard="Numeric"  TextColor="Black"/>
+                    <!-- Gender Picker -->
+                    <Frame Padding="0" BackgroundColor="#F3F4F6" BorderColor="#D1D5DB" HasShadow="False">
+                        <Picker x:Name="GenderPicker" Title="Select Gender" TextColor="Black" BackgroundColor="#F3F4F6">
+                            <Picker.Items>
+                                <x:String>Male</x:String>
+                                <x:String>Female</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </Frame>
 
-                    <Picker x:Name="MeasurePicker" Title="Measure Type" TextColor="Black">
-                        <Picker.Items>
-                            <x:String>Steps</x:String>
-                            <x:String>Distance</x:String>
-                        </Picker.Items>
-                    </Picker>
+                    <!-- Activity Picker -->
+                    <Frame Padding="0" BackgroundColor="#F3F4F6" BorderColor="#D1D5DB" HasShadow="False">
+                        <Picker x:Name="ActivityPicker" Title="Select Activity" TextColor="Black" BackgroundColor="#F3F4F6">
+                            <Picker.Items>
+                                <x:String>Walking</x:String>
+                                <x:String>Running</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </Frame>
 
-                    <Entry x:Name="StepsEntry" Placeholder="Steps (if applicable)" Keyboard="Numeric" TextColor="Black"/>
-                    <Entry x:Name="DistanceEntry" Placeholder="Distance (km if applicable)" Keyboard="Numeric" TextColor="Black"/>
+                    <!-- Speed -->
+                    <Frame Padding="10" BackgroundColor="#F3F4F6" BorderColor="#D1D5DB" HasShadow="False">
+                        <Entry x:Name="SpeedEntry" Placeholder="Speed (km/h)" Keyboard="Numeric"
+                               TextColor="Black" BackgroundColor="Transparent" PlaceholderColor="#6B7280" />
+                    </Frame>
 
-                    <!-- BUTTON -->
+                    <!-- Measure Type Picker -->
+                    <Frame Padding="0" BackgroundColor="#F3F4F6" BorderColor="#D1D5DB" HasShadow="False">
+                        <Picker x:Name="MeasurePicker" Title="Measure Type" TextColor="Black" BackgroundColor="#F3F4F6">
+                            <Picker.Items>
+                                <x:String>Steps</x:String>
+                                <x:String>Distance</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </Frame>
+
+                    <!-- Steps -->
+                    <Frame Padding="10" BackgroundColor="#F3F4F6" BorderColor="#D1D5DB" HasShadow="False">
+                        <Entry x:Name="StepsEntry" Placeholder="Steps (if applicable)" Keyboard="Numeric"
+                               TextColor="Black" BackgroundColor="Transparent" PlaceholderColor="#6B7280" />
+                    </Frame>
+
+                    <!-- Distance -->
+                    <Frame Padding="10" BackgroundColor="#F3F4F6" BorderColor="#D1D5DB" HasShadow="False">
+                        <Entry x:Name="DistanceEntry" Placeholder="Distance (km if applicable)" Keyboard="Numeric"
+                               TextColor="Black" BackgroundColor="Transparent" PlaceholderColor="#6B7280" />
+                    </Frame>
+
+                    <!-- Calculate Button -->
                     <Button
-                        Text="Calculate"
+                        Text="⚡ Calculate"
                         Clicked="OnCalculateClicked"
                         BackgroundColor="#6366F1"
                         TextColor="White"
-                        CornerRadius="10"
                         FontAttributes="Bold"
-                        HeightRequest="50"
-                        />
+                        FontSize="18"
+                        HeightRequest="54" />
 
-                    <!-- RESULT -->
+                    <!-- Result -->
                     <Label
                         x:Name="ResultLabel"
-                        FontSize="18"
+                        FontSize="20"
                         TextColor="#10B981"
                         FontAttributes="Bold"
-                        HorizontalTextAlignment="Center"
-                        />
+                        HorizontalTextAlignment="Center" />
 
                 </VerticalStackLayout>
             </Frame>
+
         </VerticalStackLayout>
     </ScrollView>
-
-
 </ContentPage>

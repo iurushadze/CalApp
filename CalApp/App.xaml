@@ -5,10 +5,31 @@
              x:Class="CalApp.App">
     <Application.Resources>
         <ResourceDictionary>
+
+            <!-- Global Font Style -->
+            <Style TargetType="Label">
+                <Setter Property="FontFamily" Value="RobotoRegular" />
+            </Style>
+
+            <Style TargetType="Entry">
+                <Setter Property="FontFamily" Value="RobotoRegular" />
+            </Style>
+
+            <Style TargetType="Picker">
+                <Setter Property="FontFamily" Value="RobotoRegular" />
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="FontFamily" Value="RobotoBold" />
+            </Style>
+
+            <!-- Merged Dictionaries -->
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
         </ResourceDictionary>
     </Application.Resources>
+
 </Application>
